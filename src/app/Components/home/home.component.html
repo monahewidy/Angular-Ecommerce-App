@@ -1,0 +1,108 @@
+<!-- interpolation  => {{}} -->
+<!-- data binding -->
+<!-- <h2>{{title}}</h2> -->
+
+<!-- <h1>{{sayHello()}}</h1> -->
+
+
+<!-- <h2>{{iti.trackName}}</h2> -->
+<!-- <img src="{{iti.trackLogo}}" width="250" height="300"> -->
+<!-- <ul>
+    <li>{{iti.itiBranches[0]}}</li>
+    <li>{{iti.itiBranches[1]}}</li>
+    <li>{{iti.itiBranches[2]}}</li>
+</ul> -->
+
+<!-- loop on element -->
+<!-- *ngFor => for of -->
+<!-- <ul>
+    <li *ngFor="let branch of iti.itiBranches">{{branch}}</li>
+</ul> -->
+
+
+
+<!-- Day2 -->
+<!-- Class -->
+
+<!-- <h1>{{classData.name}}</h1> -->
+<!-- <img src="{{classData.imgURL}}" width="300" height="300"> -->
+<!-- property binding -->
+<!-- <img [src]="classData.imgURL" *ngIf="showImg" width="300" height="300">
+<ul>
+    <li *ngFor="let item of classData.data">{{item}}</li>
+</ul> -->
+
+<!-- Event Binding -->
+<!-- toggle => show & hide image -->
+<!-- <button class="btn btn-primary" (click)="toggleImg()">Toggle img</button> -->
+
+
+<!-- property binding => one way -->
+<!-- <input type="text" class="form-control" value="{{userFeedback}}"> -->
+<!-- <input type="text" class="form-control" [value]="userFeedback"> -->
+<!-- ngModel => value -->
+<!-- two way binding -->
+
+
+  <div >
+    <div >
+        <div class="bg-white border border-dark ">
+          <div class="">
+  <!-- interpolation -->
+  <!-- data binding in angular -->
+            <!-- <h2>{{title}}</h2> -->
+
+            <h2>{{generalInf.trackName}}</h2><br>
+            <img src="{{generalInf.trackLogo}}" width="200" height="200">
+
+            <!-- <ul>
+              <li>{{generalInf.branches[0]}}</li>
+              <li>{{generalInf.branches[1]}}</li>
+              <li>{{generalInf.branches[2]}}</li>
+            </ul> -->
+            
+            <!-- loop on element -->
+            <!-- *ngFor => for of -->
+            <ul>
+              <li *ngFor="let everyBranche of generalInf.itiBranches">{{everyBranche}}</li>
+            </ul>
+
+            <!-- use class -->
+            <h1>{{classData.name}}</h1>
+            <!-- Data Binding Typies : interpolation,property binding,event binding,two-way binding -->
+            <!--1) Interpolation binding is a way to transfer the data from a TypeScript code to an HTML template (view) -->
+            <!-- use interpolation binding {{}} -->
+            <!-- <img src="{{classData.imgURL}}" width="200" height="200"> -->
+
+            <!--2) Property binding moves a value in one direction, from a component's property into a target element property -->
+            <!-- property binding use [] and remove {{}} -->
+            <img [src]="classData.imgURL" width="200" height="200">
+            <ul>
+              <li *ngFor="let item of classData.data">{{item}}</li>
+            </ul>
+            <!-- 3)event binding is an event handler for the target event (event)="function()" -->
+            <!-- event binding in angular from dom to component -->
+            <!-- use *ngIf="" to check something -->
+            <img [src]="classData.imgURL1" width="200" height="200" *ngIf="showImg"><br>
+            <button class="btn btn-dark" (click)="toggleTest()" >Toggle img</button><br><br>
+            <!-- 4)Two-way binding : from component to dom and vise versa -->
+            <!-- ngmodel : value -->
+            <!-- note: [()]="" is called banana operator -->
+            <input trype="text" class="form-control border-dark" [(ngModel)]="userFeedback" ><br>
+            <h2>{{userFeedback}}</h2>
+
+<!-- <h2>{{userFeedback}}</h2> -->
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <h1>{{ads}}</h1>
+
+    <h1>{{err}}</h1>
+
+    <h1>{{compelete}}</h1>
+  </div>
+
+
+          </div>
+        </div>
+    </div>
+  </div>
